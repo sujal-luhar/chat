@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>{{ question.question_text }}</h1>
+    <ul style="list-style-type: none;">
+        {% for choice in question.choice_set.all %}
+            <li>
+                <table style="width: 400px;border-collapse: collapse;border-style:none;">
+                    <tr style="height: 50px;">
+                        <td style="width: 80%;">{{ choice.choice_text }}</td>
+                        <td>{{ choice.votes }}</td>
+                    </tr>
+                </table>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
