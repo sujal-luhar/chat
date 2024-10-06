@@ -1,0 +1,9 @@
+li a {
+    color: green;
+}
+
+body {
+    background: white url("images/cream.jpg") no-repeat;
+    background-size: 100% auto;
+    background-position: top center; 
+}

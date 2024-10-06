@@ -1,5 +1,5 @@
 """
-URL configuration for mysite project.
+URL configuration for mypractice2 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -15,11 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import include, path
-from debug_toolbar.toolbar import debug_toolbar_urls
-
+from django.urls import path, include
 
 urlpatterns = [
-    path("polls/", include("django_sujal_polls.urls")),
+    path("polls/", include("polls.urls")),
     path("admin/", admin.site.urls),
-] + debug_toolbar_urls()
+]
